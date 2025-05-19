@@ -1,0 +1,23 @@
+body {
+    background-color: #f5f7fa;
+  }
+  
+  .table th, .table td {
+    vertical-align: middle;
+  }
+  
+  .status-pending {
+    color: #ffc107; /* yellow */
+    font-weight: bold;
+  }
+  
+  .status-active {
+    color: #28a745; /* green */
+    font-weight: bold;
+  }
+  
+  .status-completed {
+    color: #dc3545; /* red */
+    font-weight: bold;
+  }
+  

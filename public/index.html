@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Meeting Room Booking</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<div class="container py-4">
+  <div class="text-center mb-4">
+    <img src="https://hrincjobs-pro.s3.amazonaws.com/media/public/filer_public/f5/55/f555bfa2-2de6-49be-b420-ffd17df43606/550__550-05.jpg" alt="Logo" style="max-height: 100px;" />
+    <h2 class="mt-2">Meeting Room Booking</h2>
+  </div>
+
+  <button class="btn btn-primary mb-3" id="bookMeetingBtn">+ Book a Meeting</button>
+
+  <table class="table table-bordered table-hover" id="meetingsTable">
+    <thead class="table-dark">
+      <tr>
+        <th>Date (Start - End)</th>
+        <th>Time (Start - End)</th>
+        <th>Room</th>
+        <th>Booking By</th>
+        <th>Description</th>
+        <th>Status</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody></tbody>
+  </table>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="meetingModal" tabindex="-1">
+  <div class="modal-dialog">
+    <form id="meetingForm" class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="modalTitle">Book a Meeting</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body">
+        <input type="hidden" id="meetingId">
+        <div class="mb-2">
+          <label>Start Date:</label>
+          <input type="date" class="form-control" id="startDate" required />
+        </div>
+        <div class="mb-2">
+          <label>End Date:</label>
+          <input type="date" class="form-control" id="endDate" required />
+        </div>
+        <div class="mb-2">
+          <label>Start Time:</label>
+          <input type="time" class="form-control" id="startTime" required />
+        </div>
+        <div class="mb-2">
+          <label>End Time:</label>
+          <input type="time" class="form-control" id="endTime" required />
+        </div>
+        <div class="mb-2">
+          <label>Room:</label>
+          <select class="form-select" id="room" required>
+            <option value="">Select Room</option>
+            <option value="Room 1">Meeting Room 1</option>
+            <option value="Room 2">Meeting Room 2</option>
+            <option value="Room 3">Meeting Room 3</option>
+          </select>
+        </div>
+        <div class="mb-2">
+          <label>Meeting Description:</label>
+          <textarea class="form-control" id="description" required></textarea>
+        </div>
+        <div class="mb-2">
+          <label>Booking By:</label>
+          <input type="text" class="form-control" id="bookingBy" required />
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="submit" class="btn btn-success">Save</button>
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+      </div>
+    </form>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
